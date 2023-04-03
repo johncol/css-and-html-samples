@@ -1,0 +1,28 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties */
+
+/* in the traditional direction, margin top and bottom */
+html {
+  --start-margin: 10px;
+  --end-margin: 10px;
+
+  margin-block: var(--start-margin) var(--end-margin);
+  margin-block-start: var(--start-margin);
+  margin-block-end: var(--end-margin);
+}
+
+/* in the traditional direction, margin left and right */
+html {
+  --start-margin: 10px;
+  --end-margin: 10px;
+
+  margin-inline: var(--start-margin) var(--end-margin);
+  margin-inline-start: var(--start-margin);
+  margin-inline-end: var(--end-margin);
+}
+
+.box {
+  padding-block-start: 1px;
+  padding-block-end: 1px;
+  padding-inline-start: 1px;
+  padding-inline-end: 1px;
+}

@@ -1,0 +1,7 @@
+strong {
+  box-decoration-break: clone;
+  
+  padding-left: 8px;
+  padding-right: 8px;
+  background: peachpuff;
+}

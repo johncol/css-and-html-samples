@@ -1,0 +1,8 @@
+.container {
+  isolation: isolate;
+}
+
+/*
+  All the ways to create stacking contexts:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+*/
