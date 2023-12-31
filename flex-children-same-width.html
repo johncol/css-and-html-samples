@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+  </head>
+
+  <style>
+    /* esthetic rules */
+    article {
+      margin: 8px;
+      border-radius: 16px;
+      box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.2);
+    }
+
+    article img {
+      border-radius: 12px 12px 0px 0px;
+    }
+
+    article section {
+      padding: 8px 16px 16px;
+    }
+
+    article h2 {
+      margin-bottom: 8px;
+    }
+
+    article p {
+      font-weight: 300;
+    }
+
+    /* flexbox rules */
+    /* to achieve the 3 articles to have the same width inside the flexbox container independent
+     * of the hypothetical size which is just their natural size based on their contents
+     */
+    img {
+      width: 100%;
+    }
+
+    main {
+      display: flex;
+
+      article {
+        flex: 1;
+        /* which is the same as: */
+        flex: 1 1 0px;
+        /* which is the same as: */
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0px;
+      }
+    }
+  </style>
+
+  <body>
+    <main>
+      <article>
+        <img src="https://courses.joshwcomeau.com/cfj-mats/cat-300px.jpg" />
+        <section>
+          <h2>Study: Catnip is GOOD</h2>
+          <p>
+            The number-crunching mousers have good news for us all: catnip is as
+            good for us as it feels!
+          </p>
+        </section>
+      </article>
+      <article>
+        <img src="https://courses.joshwcomeau.com/cfj-mats/cat-two-300px.jpg" />
+        <section>
+          <h2>My journey from the city to the exurbs</h2>
+          <p>
+            When the human said we'd be moving to rural Wisconsin, I was
+            indifferent; who cares where we live, as long as they keep the wet
+            food coming, right? But I soon discovered: Wisconsin has an
+            incredible bounty of mice and cheese.
+          </p>
+        </section>
+      </article>
+      <article>
+        <img
+          src="https://courses.joshwcomeau.com/cfj-mats/cat-three-300px.jpg"
+        />
+        <section>
+          <h2>Their trinkets deserve to fall.</h2>
+          <p>
+            Fellow felines, I trust that you know my frustration well. Humans
+            are constantly running around doing unimportant things. Going out
+            without bringing us anything back. It boggles the mind! But I found
+            One Neat Trick to get them to pay us more attention…
+          </p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
