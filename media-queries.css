@@ -1,0 +1,44 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media */
+
+/* 
+  https://courses.joshwcomeau.com/css-for-js/05-responsive-css/06-other-queries
+
+  Device                                  Hover	Pointer
+  Mouse / Trackpad                        hover	fine
+  Touchscreen (smartphone, tablet)	      none	coarse
+  Keyboard (focus navigation)	            none	none
+  Eye-tracking	                          none	fine
+  Basic stylus digitizers	                none	fine
+  Sip-and-puff switches	                  none	none
+  Microsoft Kinect / Wii remote	          hover	coarse
+*/
+
+button {
+  @media(hover: hover) and (pointer: fine) {
+    /* styles */
+  }
+}
+
+.container {
+  @media (prefers-color-scheme: light) {
+    /* styles */
+  }
+  @media (prefers-color-scheme: dark) {
+    /* styles */
+  }
+}
+
+.animation {
+  @media (prefers-reduced-motion: no-preference) {
+    /* animation styles */
+  }
+}
+
+.modal {
+  @media (orientation: portrait) {
+    /* styles */
+  }
+  @media (orientation: landscape) {
+    /* styles */
+  }
+}
