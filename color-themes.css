@@ -1,0 +1,24 @@
+:root {
+  --background: 250deg 10%;
+  --color: 250deg 20%;
+  --link-color: 250deg 100%;
+}
+
+body {
+  background: hsl(var(--background) 90%);
+  color: hsl(var(--color) 20%);
+
+  @media (prefers-color-scheme: dark) {
+    background: hsl(var(--background) 10%);
+    color: hsl(var(--color) 95%);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--link-color) 50%);
+
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--link-color) 75%);
+  }
+}
