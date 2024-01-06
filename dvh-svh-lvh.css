@@ -1,0 +1,14 @@
+/* https://caniuse.com/viewport-unit-variants */
+.element {
+  /* 100% of viewport height with the downside of mobile devices taking into account the space that is actually sued by the toolbar */
+  height: 100vh; 
+
+  /* large viewport height, basically the same as vh */
+  height: 100lvh;
+
+  /* small viewport height, vh - browser toolbar height */
+  height: 100svh;
+
+  /* dynamic viewport height, which is equal to svh when the browser toolbar is visible and equal to lvh when the toolbar is not visible */
+  height: 100dvh;
+}
