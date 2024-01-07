@@ -1,0 +1,18 @@
+.element {
+  /* clamp(min value, preferred value, max value) */
+  /* calculate preferred value, if it's lower than min, return min, if greater than max, then return max, if it's in the middle, return preferred */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/clamp */
+  width: clamp(500px, 60%, 1000px);
+}
+
+.element {
+  /* min() */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/min */
+  width: min(500px, 60%);
+}
+
+.element {
+  /* max() */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/max */
+  width: max(500px, 60%);
+}
