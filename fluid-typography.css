@@ -1,0 +1,11 @@
+h1 {
+  font-size: clamp(
+    /* a min size that depends on the base font size set by the user (defaults to 16px) */
+    1.5rem,
+    /* a preferred font size that depends on the viewport width and ALSO, importantly, on the base font size set by the user */
+    /* it is important because it makes the content responsive to the user preferences, like default font size */
+    5vw + 1rem,
+    /* a max size that also depends on the base font size set by the user (defaults to 16px) */
+    3rem
+  );
+}
