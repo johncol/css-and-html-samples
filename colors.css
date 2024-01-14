@@ -1,0 +1,14 @@
+element {
+  /* standard RGB color space (aka sRGB): named colors, rgb, hexadecimal, hsl */
+  color: deeppink;
+
+  color: rgb(255 155 55);
+  color: rgb(255 155 55 / 0.5);
+
+  color: #FF99BB;
+  color: #FF99BB88;
+
+  /* hue, saturation, lightness */
+  color: hsl(270deg 100% 50%);
+  color: hsl(270deg 100% 50% / 0.5);
+}
