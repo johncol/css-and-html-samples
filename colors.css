@@ -11,4 +11,15 @@ element {
   /* hue, saturation, lightness */
   color: hsl(270deg 100% 50%);
   color: hsl(270deg 100% 50% / 0.5);
+
+  /* display P3 color space */
+  color: color(display-p3 1 0 0);
+
+  /* https://caniuse.com/?search=lch */
+  /* lightness chroma hue
+     The lch() and lab() color functions are based on the CIE LAB color space,
+     representing colors in a way that closely matches human perception and provides
+    access to a wider spectrum of colors than offered by the usual RGB color space. 
+   */
+  color: lch(50% 100 300);
 }
