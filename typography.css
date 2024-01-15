@@ -1,0 +1,33 @@
+.breakable-text {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  hyphenate-character: "--";
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.single-line-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  /* change the algorithm the browser uses to break lines */
+  /* https://developer.chrome.com/docs/css-ui/css-text-wrap-balance */
+  text-wrap: balance;
+}
+
+h1 {
+  max-inline-size: 25ch;
+}
