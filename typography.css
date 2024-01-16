@@ -31,3 +31,24 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   max-inline-size: 25ch;
 }
+
+.anecdotes {
+  columns: 2;
+  column-gap: 2rem;
+
+  p {
+    break-inside: avoid;
+  }
+}
+
+p::first-letter {
+  margin-left: 2rem;
+}
+/* OR */
+p {
+  text-indent: 2rem;
+}
+
+p {
+  text-align: justify;
+}
