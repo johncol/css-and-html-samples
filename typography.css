@@ -29,6 +29,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
+  /* using the ch unit we can prevent long titles or paragraphs
+   * the recommended length based on research is in the range 50-75 characters per line 
+   */
   max-inline-size: 25ch;
 }
 
@@ -44,6 +47,7 @@ h1 {
 p::first-letter {
   margin-left: 2rem;
 }
+
 /* OR */
 p {
   text-indent: 2rem;
@@ -52,3 +56,39 @@ p {
 p {
   text-align: justify;
 }
+
+/** 
+ A rising trend in recent years is to use the "system font stack".
+ https://systemfontstack.com/
+ */
+.system-font-stack {
+  font-family:
+    -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+}
+
+
+html {
+  --font-sans-serif:
+    -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif:
+    Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+
+  font-family: var(--font-sans-serif);
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-serif);
+  }
+}
+
+/**
+ font-loading strategies: (font-display property in @font-face)
+  - block
+  - swap
+  - fallback
+  - optional
+*/
