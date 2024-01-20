@@ -1,5 +1,5 @@
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Asap", sans-serif;
 }
 
 html {
@@ -47,7 +47,7 @@ footer {
   font-size: 2rem;
 
   /* font-weight: 900; */
-  font-variation-settings: "wght" 900;
+  font-variation-settings: "wght" 900, "wdth" 100;
 }
 
 .sublogo {
@@ -56,7 +56,7 @@ footer {
   /* font-style: italic;
   font-weight: 500; */
 
-  font-variation-settings: "wght" 500, "ital" 1;
+  font-variation-settings: "ital" 1, "wght" 500;
 }
 
 .person-name {
