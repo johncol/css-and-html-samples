@@ -1,0 +1,8 @@
+/* https://developer.chrome.com/docs/css-ui/scrollbar-styling */
+.container {
+  /* scrollbar-color: <thumb-color> <track-color>; */
+  scrollbar-color: salmon lightgreen;
+
+  /* scrollbar-width: auto | thin | none; */
+  scrollbar-width: thin;
+}
