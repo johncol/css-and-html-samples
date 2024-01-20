@@ -1,5 +1,6 @@
 * {
   font-family: "Asap", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -35,6 +36,11 @@ footer {
   justify-content: space-between;
   max-width: calc(1200 / 16 * 1rem);
   margin: 0 auto;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
 }
 
 .meta {
@@ -48,6 +54,11 @@ footer {
 
   /* font-weight: 900; */
   font-variation-settings: "wght" 900, "wdth" 100;
+  white-space: nowrap;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.8rem;
+  }
 }
 
 .sublogo {
