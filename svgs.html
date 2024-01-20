@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      .icon-wrapper {
+        width: 100px;
+        height: 100px;
+      }
+
+      /* with inline SVG, properties defined in the markup can be changed via CSS */
+      svg circle {
+        fill: salmon;
+        stroke: tomato;
+        stroke-width: 10px;
+      }
+    </style>
+  </head>
+<body>
+  <h1>Hello World</h1>
+  <div class="icon-wrapper">
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="50" cy="50" r="40" stroke="black" fill="pink" />
+    </svg>
+  </div>
+</body>
+</html>
