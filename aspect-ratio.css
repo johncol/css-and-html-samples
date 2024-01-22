@@ -1,0 +1,10 @@
+.image {
+  object-fit: cover;
+  width: 30rem;
+  /* 
+   this ensures that the ratio between width and height is gonna be 2 to 1
+   which in this case is 30rem to 15rem
+   and with object-fit: cover, the image will be enlarged and cropped to fit the box of the specified dimensions
+   */
+  aspect-ratio: 2 / 1;
+}
