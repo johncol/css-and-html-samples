@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images</title>
+  </head>
+  <body>
+    <!-- using srcset in the image tag -->
+    <img
+      alt="Photo of a street in Japan"
+      src="assets/filipe-freitas-unsplash.jpg"
+      srcset="
+        assets/filipe-freitas-unsplash.jpg    1x,
+        assets/filipe-freitas-unsplash@2x.jpg 2x,
+        assets/filipe-freitas-unsplash@3x.jpg 3x
+      "
+    />
+  </body>
+</html>
