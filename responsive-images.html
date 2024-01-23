@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Images</title>
     <style>
+      html {
+        --sans-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: var(--sans-serif);
+        color: #333;
+      }
+
       body {
         padding: 10px;
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
       }
+
       img {
         display: block;
-        max-width: 300px;
+        width: 300px;
+        object-fit: cover;
+        object-position: center top;
+        aspect-ratio: 3 / 4;
+        border: 1px dashed #ddd;
       }
     </style>
   </head>
@@ -38,6 +49,30 @@
     <!-- using picture and source -->
     <picture>
       <source
+        srcset="
+          assets/filipe-freitas-unsplash.jpg    1x,
+          assets/filipe-freitas-unsplash@2x.jpg 2x,
+          assets/filipe-freitas-unsplash@3x.jpg 3x
+        "
+      />
+      <img
+        alt="Photo of a street in Japan"
+        src="assets/filipe-freitas-unsplash.jpg"
+      />
+    </picture>
+
+    <!-- using picture and several sources -->
+    <picture>
+      <source
+        type="image/avif"
+        srcset="
+          assets/filipe-freitas-unsplash.avif    1x,
+          assets/filipe-freitas-unsplash@2x.avif 2x,
+          assets/filipe-freitas-unsplash@3x.avif 3x
+        "
+      />
+      <source
+        type="image/jpg"
         srcset="
           assets/filipe-freitas-unsplash.jpg    1x,
           assets/filipe-freitas-unsplash@2x.jpg 2x,
