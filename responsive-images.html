@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Images</title>
+    <style>
+      body {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      img {
+        display: block;
+        max-width: 300px;
+      }
+    </style>
   </head>
   <body>
+    <!-- non responsive image -->
+    <img
+      alt="Photo of a street in Japan"
+      src="assets/filipe-freitas-unsplash.jpg"
+    />
+
     <!-- using srcset in the image tag -->
     <img
       alt="Photo of a street in Japan"
@@ -16,5 +34,20 @@
         assets/filipe-freitas-unsplash@3x.jpg 3x
       "
     />
+
+    <!-- using picture and source -->
+    <picture>
+      <source
+        srcset="
+          assets/filipe-freitas-unsplash.jpg    1x,
+          assets/filipe-freitas-unsplash@2x.jpg 2x,
+          assets/filipe-freitas-unsplash@3x.jpg 3x
+        "
+      />
+      <img
+        alt="Photo of a street in Japan"
+        src="assets/filipe-freitas-unsplash.jpg"
+      />
+    </picture>
   </body>
 </html>
