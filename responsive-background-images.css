@@ -1,0 +1,18 @@
+.container {
+  background-image: url("assets/filipe-freitas-unsplash.jpg");
+  /*
+  this it the lowest resolution image intrinsic width
+  if not set, the browser will use the image's actual width which works for
+  1x displays but will be too large for 2x and 3x displays
+  given the media queries below
+   */
+  background-size: 640px; 
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("assets/filipe-freitas-unsplash@2x.jpg");
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: url("assets/filipe-freitas-unsplash@3x.jpg");
+  }
+}
