@@ -1,0 +1,24 @@
+.container {
+  background-image: url("assets/filipe-freitas-unsplash.jpg");
+
+  /* background-image also accepts gradients */
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+  /* object-fit was inspired on the keyword values of background-size */
+  background-size: cover;
+  background-size: contain;
+
+  /* object-position was inspired on the background-position property */
+  background-position: center;
+  background-position: 50% 50%;
+
+  /*
+  background-repeat options that prevent the repeat pattern of the background image
+  to be cut when reaching the end of the container vertically and horizontally
+   - space adds space between the images
+   - round stretches the images to fill the container
+  */
+  background-repeat: space;
+  background-repeat: round;
+}
