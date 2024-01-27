@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Grid PoC</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 3rem;
+        --sans-serif:
+            -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+            helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+            sans-serif;
+        font-family: var(--sans-serif);
+        color: #333;
+      }
+
+      .ametx4 {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 50px);
+        grid-template-rows: repeat(2, 20px);
+        background-color: rgb(223, 223, 223);
+
+        span {
+          outline: 1px dotted olivedrab;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>
+        Lorem ipsum dolor sit
+        <span class="ametx4">
+          <span>amet</span>
+          <span>amet</span>
+          <span>amet</span>
+          <span>amet</span>
+        </span>
+        consectetur adipisicing elit. Officiis, dolor! Minima doloribus debitis
+        tenetur laborum provident libero voluptate officia eum iure soluta,
+        vitae exercitationem natus quidem fugiat laudantium corporis at!
+      </p>
+    </main>
+  </body>
+</html>
