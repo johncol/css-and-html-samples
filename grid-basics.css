@@ -153,3 +153,11 @@
   /* align vertically the item inside the cell to the center */
   align-items: center;
 }
+
+/* 
+  justify-self and align-self are just like justify-items and align-items, but for a single element inside a grid
+ */
+.some-element-inside-a-grid {
+  justify-self: end;
+  align-self: center;
+}
