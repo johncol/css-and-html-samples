@@ -1,0 +1,61 @@
+.container {
+  display: grid;
+  /*
+    this is the default value, which means that if not rows/columns are specified
+    the grid will have a single column and as many rows as children
+  */
+  grid-auto-flow: row;
+  /*
+  it can be changed to row, which means that if not rows/columns are specified
+  the grid will have a single row and as many columns as children
+  */
+  grid-auto-flow: column;
+}
+
+.container {
+  display: grid;
+
+  /*
+    2 columns defined with hard limits: the 1st one will use 30% of the available space
+  */
+  grid-template-columns: 30% 70%;
+
+  /*
+    2 columns defined with soft limits: the 1st one will use 3/10th of the available space
+    unless its content needs more space, in that case it'll use more
+  */
+  grid-template-columns: 3fr 7fr;
+
+  /*
+    3 columns, the first will occupy 500px, and the remaining space, 500px, will be divided
+    in 1fr + 4fr = 5fr, meaning each fr unit will be 100px, so the 2nd column will be 100px
+    and the 3rd one 400px
+  */
+  width: 1000px;
+  grid-template-columns: 500px 1fr 4fr;
+}
+
+.container {
+  display: grid;
+  /* 3 rows */
+  grid-template-rows: 300px 1fr 300px;
+}
+
+.container {
+  display: grid;
+
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 200px 1fr 150px;
+
+  gap: 2rem;
+}
+
+.container {
+  display: grid;
+
+  /* repeat function */
+  grid-template-columns: 400px repeat(5, fr) 150px;
+
+  /* define the default height of new rows */
+  grid-auto-rows: 100px;
+}
