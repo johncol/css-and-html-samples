@@ -106,3 +106,50 @@
   /* align horizontally the item inside the cell to the center */
   justify-items: center;
 }
+
+/**
+  align-content is just like justify-content, but for the rows
+*/
+.container {
+  display: grid;
+
+  /* default, makes the rows as tall as available space there is in the grid for each row */
+  align-content: stretch;
+
+  /* brings all the rows to the center of the grid */
+  align-content: center;
+
+  /* brings all the rows to the start of the grid */
+  align-content: start;
+
+  /* brings all the rows to the end of the grid */
+  align-content: end;
+
+  /* align all rows with the space between them */
+  align-content: space-between;
+
+  /* align all rows with the space around them */
+  align-content: space-around;
+
+  /* align all rows with the space evenly distributed between them */
+  align-content: space-evenly;
+}
+
+/**
+  align-items is just like justify-items, but for the rows
+*/
+.container {
+  display: grid;
+
+  /* default, stretches vertically the item inside the cell to use the whole height of the cell */
+  align-items: stretch;
+
+  /* align vertically the item inside the cell to the start */
+  align-items: start;
+
+  /* align vertically the item inside the cell to the end */
+  align-items: end;
+
+  /* align vertically the item inside the cell to the center */
+  align-items: center;
+}
