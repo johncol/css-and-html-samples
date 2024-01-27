@@ -191,3 +191,25 @@
     grid-area: footer;
   }
 }
+
+.container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10rem 1fr 6rem;
+
+  header {
+    grid-column: 1 / -1;
+    grid-row: 1; /* or the same thing 1 / 2 */
+  }
+
+  main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+}
