@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  /*
+    first column will be at least 100px, and at most 1fr
+    second column doesn't have a minimum, and will occupy also 1fr
+    in a 400px wide container, the first column will be 200px, and the second 200px
+    in a 200px wide container, the first column will be 100px, and the second 100px
+    in a 150px wide container, the first column will be 100px, and the second 50px
+  */
+  grid-template-columns: minmax(100px, 1fr) 1fr;
+}
+
+.container {
+  display: grid;
+
+  /* 
+    have as many columns as possible, each one 100ch wide
+   */
+  grid-template-columns: repeat(auto-fill, 100ch);
+
+  /* 
+    have as many columns as possible, each one at least 100px wide 
+   */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  );
+
+  /* 
+   as many columns as possible, each one at least 400px, unless the window is smaller,
+   in that case that minimum is not 400px, which would cause a horizontal scrollbar,
+   it'll be 100% of the window width
+   */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      min(100%, 400px),
+      1fr
+    )
+  );
+
+  /* same result as above, just using a variable what may make it easier to understand */
+  --400px-or-less-if-window-is-smaller: min(100%, 400px);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      var(--400px-or-less-if-window-is-smaller),
+      1fr
+    )
+  );
+}
