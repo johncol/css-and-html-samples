@@ -56,30 +56,30 @@
 
         display: grid;
         grid-template-areas:
-          "header header header"
-          "nav    main   aside"
-          "footer footer footer";
+          "first-row   first-row first-row   "
+          "left-column main-area right-column"
+          "last-row    last-row  last-row    ";
         grid-template-columns: 200px 1fr 150px;
         grid-template-rows: 4rem 1fr 5rem;
 
         header {
-          grid-area: header;
+          grid-area: first-row;
         }
 
         nav {
-          grid-area: nav;
+          grid-area: left-column;
         }
 
         main {
-          grid-area: main;
+          grid-area: main-area;
         }
 
         aside {
-          grid-area: aside;
+          grid-area: right-column;
         }
 
         footer {
-          grid-area: footer;
+          grid-area: last-row;
         }
       }
     </style>
