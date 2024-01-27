@@ -161,3 +161,33 @@
   justify-self: end;
   align-self: center;
 }
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "hero   hero   hero  "
+    "menu   main   ads   "
+    "menu   main   ads   "
+    "footer footer footer";
+
+  & > header {
+    grid-area: hero;
+  }
+
+  & > nav {
+    grid-area: menu;
+  }
+
+  & > main {
+    grid-area: main;
+  }
+
+  & > aside {
+    grid-area: ads;
+  }
+
+  & > footer {
+    grid-area: footer;
+  }
+}
