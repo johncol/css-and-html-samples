@@ -60,22 +60,30 @@
   grid-auto-rows: 100px;
 }
 
-
+/**
+  justify-content applies to the grid structure, changing the columns.
+*/
 .container {
   display: grid;
 
   /* default */
   justify-content: stretch;
 
-  /* align all items to the start */
+  /* align all columns to the start*/
   justify-content: start;
 
-  /* align all items to the end */
+  /* align all columns to the end */
   justify-content: end;
 
-  /* align all items to the center */
+  /* align all columns to the center */
   justify-content: center;
 
-  /* align all items with the space between them */
+  /* align all columns with the space between them */
   justify-content: space-between;
+
+  /* align all columns with the space around them */
+  justify-content: space-around;
+
+  /* align all columns with the space evenly distributed between them */
+  justify-content: space-evenly;
 }
