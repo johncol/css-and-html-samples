@@ -87,3 +87,22 @@
   /* align all columns with the space evenly distributed between them */
   justify-content: space-evenly;
 }
+
+/**
+  justify-items applies to the child elements, without affecting the shape of the grid.
+*/
+.container {
+  display: grid;
+
+  /* default, stretches horizontally the item inside the cell to use the whole width of the cell */
+  justify-items: stretch;
+
+  /* align horizontally the item inside the cell to the start */
+  justify-items: start;
+
+  /* align horizontally the item inside the cell to the end */
+  justify-items: end;
+
+  /* align horizontally the item inside the cell to the center */
+  justify-items: center;
+}
