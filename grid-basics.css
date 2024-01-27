@@ -54,8 +54,28 @@
   display: grid;
 
   /* repeat function */
-  grid-template-columns: 400px repeat(5, fr) 150px;
+  grid-template-columns: 400px repeat(5, 1fr) 150px;
 
   /* define the default height of new rows */
   grid-auto-rows: 100px;
+}
+
+
+.container {
+  display: grid;
+
+  /* default */
+  justify-content: stretch;
+
+  /* align all items to the start */
+  justify-content: start;
+
+  /* align all items to the end */
+  justify-content: end;
+
+  /* align all items to the center */
+  justify-content: center;
+
+  /* align all items with the space between them */
+  justify-content: space-between;
 }
