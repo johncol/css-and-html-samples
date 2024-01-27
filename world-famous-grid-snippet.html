@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- https://courses.joshwcomeau.com/css-for-js/07-css-grid/09-fluid-grids -->
+    <title>World-Famous Grid Snippet</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: hsl(210deg 55% 92%);
+      }
+      .grid {
+        filter: drop-shadow(0px 2px 8px hsl(0deg 0% 0% / 0.25));
+      }
+      .item {
+        height: 75px;
+        background: white;
+        border-radius: 4px;
+      }
+    </style>
+
+    <style>
+      .grid {
+        --spacing: 16px;
+        display: grid;
+        padding: var(--spacing);
+        gap: var(--spacing);
+
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(
+            min(100%, 320px),
+            1fr
+          )
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <main class="grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </main>
+  </body>
+</html>
