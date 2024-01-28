@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html {
+        --sans-serif: 
+            system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+        color: #444;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--sans-serif);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .grid {
+        --header-height: 5rem;
+
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";
+        grid-template-columns: 14rem 1fr;
+        gap: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+      }
+
+      header {
+        background: white;
+        grid-area: header;
+        height: var(--header-height);
+        border-bottom: 3px solid;
+        display: grid;
+        place-content: center;
+        z-index: 2;
+      }
+
+      aside {
+        grid-area: sidebar;
+      }
+
+      main {
+        grid-area: main;
+        min-height: 180vh;
+        border: 3px solid;
+        display: grid;
+        align-items: end;
+      }
+
+      footer {
+        background: white;
+        grid-area: footer;
+        height: 5rem;
+        border-top: 3px solid;
+        display: grid;
+        place-content: center;
+      }
+
+      .grid > * {
+        padding: 8px;
+      }
+    </style>
+
+    <style>
+      .grid {
+        isolation: isolate;
+
+        header {
+          position: sticky;
+          top: 0;
+          z-index: 2;
+        }
+
+        aside {
+          z-index: 1;
+
+          .nav-wrapper {
+            background: white;
+            position: sticky;
+            top: 0;
+            top: var(--header-height);
+          }
+        }
+
+        footer {
+          z-index: 2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <header>
+        <h1>My Website</h1>
+      </header>
+      <aside>
+        <div class="nav-wrapper">
+          <h2>Chicken Cacciatore</h2>
+          <nav>
+            <ol>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+              <li>Introduction</li>
+              <li>Prep</li>
+              <li>Cooking</li>
+              <li>Reviews</li>
+            </ol>
+          </nav>
+        </div>
+      </aside>
+      <main>Main Content</main>
+      <footer>Copyright notice</footer>
+    </div>
+  </body>
+</html>
