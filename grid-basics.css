@@ -213,3 +213,29 @@
     grid-row: 3 / 4;
   }
 }
+
+.container {
+  place-content: center;
+
+  /* it's the same as */
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  place-items: center;
+
+  /* it's the same as */
+  justify-items: center;
+  align-items: center;
+}
+
+.center-child-option-1 {
+  display: grid;
+  place-content: center;
+}
+
+.center-child-option-2 {
+  display: grid;
+  place-items: center;
+}
