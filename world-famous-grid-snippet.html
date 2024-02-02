@@ -30,6 +30,10 @@
         padding: var(--spacing);
         gap: var(--spacing);
 
+        /* 
+        min(100%, 320px) is to ensure that in very small viewports, smaller that 320,
+        the grid will shrink and not cause horizontal scrolling
+         */
         grid-template-columns: repeat(
           auto-fill,
           minmax(
