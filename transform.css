@@ -13,4 +13,11 @@
   transform: skew(180deg, 90deg);
   transform: skewX(180deg);
   transform: skewY(180deg);
+
+  /* default transform-origin */
+  transform-origin: 50% 50%; 
+  transform-origin: center center; 
+
+  transform-origin: left top;
+  transform-origin: 0% 0%;
 }
