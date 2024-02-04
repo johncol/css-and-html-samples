@@ -20,4 +20,8 @@
 
   transform-origin: left top;
   transform-origin: 0% 0%;
+
+  /* multiple transform can be applied, and the order IS important */
+  transform: rotate(45deg) translateX(30px);
+  transform: translateX(30px) rotate(45deg);
 }
