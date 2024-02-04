@@ -1,0 +1,16 @@
+.element {
+  transform: translate(100px, 300px);
+  transform: translateX(100%);
+  transform: translateY(300px);
+
+  transform: scale(2);
+  transform: scale(2, 2);
+
+  transform: rotate(360deg);
+  transform: rotate(1turn);
+
+  transform: skew(180deg);
+  transform: skew(180deg, 90deg);
+  transform: skewX(180deg);
+  transform: skewY(180deg);
+}
