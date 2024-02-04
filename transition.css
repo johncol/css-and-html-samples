@@ -1,0 +1,17 @@
+.element {
+  /* the property and the duration are the only mandatory values */
+  transition: transform 200ms;
+
+  /* ease is the default value for transition-timing-function */
+  transition: transform 200ms ease;
+  transition-timing-function: ease;
+
+  /* other values for transition-timing-function are */
+  transition-timing-function: linear;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+  transition-delay: 500ms;
+}
