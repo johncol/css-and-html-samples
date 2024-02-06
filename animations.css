@@ -1,0 +1,21 @@
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  tp {
+    transform: translateX(0%);
+  }
+}
+
+.element {
+  animation: slide-in 1s;
+
+  /* default value for the timing-function */
+  animation-timing-function: ease;
+
+  /* the default value is 1 */
+  animation-iteration-count: 1;
+  /* one spacial keyword is supported: infinite */
+  animation-iteration-count: infinite;
+}
