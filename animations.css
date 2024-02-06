@@ -18,4 +18,7 @@
   animation-iteration-count: 1;
   /* one spacial keyword is supported: infinite */
   animation-iteration-count: infinite;
+
+  /* animation-delay also exists, just like transition-delay */
+  animation-delay: 500ms;
 }
