@@ -1,0 +1,21 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+div.spinner {
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-left-color: #111;
+
+  animation: rotate 1s infinite;
+  animation-timing-function: linear;
+}
