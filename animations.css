@@ -35,4 +35,13 @@
 
   /* animation-delay also exists, just like transition-delay */
   animation-delay: 500ms;
+
+  /* default value is normal, the animation transitions from 0% to 100% */
+  animation-direction: normal;
+  /* the animation transitions from 100% to 0% */
+  animation-direction: reverse;
+  /* the animation transitions from 0% to 100% and then from 100% to 0% */
+  animation-direction: alternate;
+  /* the animation transitions from 100% to 0% and then from 0% to 100% */
+  animation-direction: alternate-reverse;
 }
