@@ -8,6 +8,20 @@
   }
 }
 
+@keyframes spin-back-and-forth {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .element {
   animation: slide-in 1s;
 
