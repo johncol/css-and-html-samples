@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation-waving-hand</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: grid;
+        place-content: center;
+      }
+      .wave {
+        font-size: 3rem;
+        cursor: default;
+        user-select: none;
+      }
+    </style>
+
+    <style>
+      @keyframes waving {
+        from {
+          transform: rotate(calc(var(--rotation) * -1));
+        }
+        to {
+          transform: rotate(var(--rotation));
+        }
+      }
+      .wave {
+        display: block;
+        transform-origin: right bottom;
+        --rotation: 10deg;
+        animation: waving 1s ease-in-out infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span class="wave" role="img" aria-label="Waving hand"> 👋 </span>
+    </p>
+  </body>
+</html>
