@@ -76,4 +76,13 @@
     the animation gets paused on whatever state it was when this property is set
   */
   animation-play-state: paused;
+
+  /*
+    we're letting know the browser ahead of time that for this element, we will be animating the property transform
+    so that the browser can optimize the animation. How? By letting the GPU handle the rendering of this element since the
+    beginning, instead of when the animation starts (which can cause a flick at the beginning and end of animations 
+    when the browser is processing the rendering with the CPU and delegates the animation rendering to the GPU; and then
+    again when the animation ends and the rendering task is handed off back again from the GPU to the CPU)
+  */
+  will-change: transform;
 }
