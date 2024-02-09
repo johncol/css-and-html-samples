@@ -44,4 +44,26 @@
   animation-direction: alternate;
   /* the animation transitions from 100% to 0% and then from 0% to 100% */
   animation-direction: alternate-reverse;
+
+  /*
+    default value is none, which means that the initial and final values of those css rules
+    applied in the animation are not applied to the element before the animation starts
+    or after it ends
+  */
+  animation-fill-mode: none;
+  /*
+    the initial values of the css rules applied in the animation are applied to the element
+    before the animation starts, which matters when animation-delay is set
+  */
+  animation-fill-mode: backwards;
+  /*
+    the final values of the css rules applied in the animation are applied to the element
+    after the animation ends
+  */
+  animation-fill-mode: forwards;
+  /*
+    the initial and final values of the css rules applied in the animation are applied to the element
+    before the animation starts and after it ends
+  */
+  animation-fill-mode: both;
 }
