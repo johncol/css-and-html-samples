@@ -66,4 +66,14 @@
     before the animation starts and after it ends
   */
   animation-fill-mode: both;
+
+  /* 
+    default value is running, which means that the transitions stated in the keyframes of the
+    animation set are applied to the element
+   */
+  animation-play-state: running;
+  /*
+    the animation gets paused on whatever state it was when this property is set
+  */
+  animation-play-state: paused;
 }
