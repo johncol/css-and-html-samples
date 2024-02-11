@@ -1,0 +1,27 @@
+.strategy-based-on-progressive-enhancement {
+  /* no animation or fancy transition defined by default */
+
+  /*
+    the following rules apply only if the browser supports detection of the preference query
+    and the user has not set a preference for reduced motion
+  */
+  @media (prefers-reduced-motion: no-preference) {
+    animation: some-fancy-animation 1s;
+    transition: some-property-like-transform 2s;
+  }
+}
+
+.strategy-disable-based-on-use-preference {
+  animation: some-fancy-animation 1s;
+  transition: some-property-like-transform 2s;
+
+  /*
+    the downside of this strategy is that very old browsers will not understand
+    the media query, so the rules disabling the animation and transition will not apply
+    even if the user has set a preference for reduced motion
+  */
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    transition: none;
+  }
+}
