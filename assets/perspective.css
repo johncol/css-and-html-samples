@@ -11,3 +11,12 @@
 .element {
   transform: perspective('distance from user') rotateX('angle');
 }
+
+/* 
+  with the property transform-style we can change the stacking algorithm to, instead of using z-index,
+  use the z-axis of the 3D environment
+ */
+.parent {
+  perspective: 400px;
+  transform-style: preserve-3d;
+}
