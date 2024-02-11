@@ -1,0 +1,8 @@
+/* in this example, each .child will be rotated based on the same shared perspective environment created .parent */
+.parent {
+  perspective: 'distance from user';
+
+  .child {
+    transform: rotateX('angle');
+  }
+}
