@@ -6,3 +6,8 @@
     transform: rotateX('angle');
   }
 }
+
+/* and in this example, the perspective is applied using a transform function directly to the element */
+.element {
+  transform: perspective('distance from user') rotateX('angle');
+}
