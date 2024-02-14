@@ -1,0 +1,12 @@
+.element {
+  filter: blur(5px);
+  filter: brightness(150%);
+  filter: contrast(150%);
+  filter: sepia(100%);
+  filter: grayscale(100%) contrast(150%);
+  filter: hue-rotate(90deg);
+  filter: drop-shadow(16px 16px 20px blue);
+
+  -webkit-backdrop-filter: blur(5px); /* safari still needs the prefix */
+  backdrop-filter: blur(5px);
+}
