@@ -4,10 +4,14 @@
   --blur-radius: 5px;
   --shadow-color: hsl(0deg 0% 0% / 0.25);
 
-  box-shadow: var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
-
-  /* filter is a different mathematical mechanism to box-shadow */
+  box-shadow:         var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
   filter: drop-shadow(var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color));
+  text-shadow:        var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
 
-  text-shadow: var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
+  /* Spread radius = increase or decrease the size of the shadow, which by default equals the box */
+  --spread-radius: 10px;
+  box-shadow: var(--delta-x) var(--delta-y) var(--blur-radius) var(--spread-radius) var(--shadow-color);
+
+  /* Inset shadow */
+  box-shadow: inset var(--delta-x) var(--delta-y) var(--blur-radius) var(--spread-radius) var(--shadow-color);
 }
