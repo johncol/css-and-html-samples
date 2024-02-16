@@ -2,7 +2,7 @@
   --delta-x: 2px;
   --delta-y: 2px;
   --blur-radius: 5px;
-  --shadow-color: hsl(0 0 0 / 50%);
+  --shadow-color: hsl(0deg 0% 0% / 0.25);
 
   box-shadow: var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
 
