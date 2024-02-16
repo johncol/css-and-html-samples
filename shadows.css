@@ -1,0 +1,13 @@
+.element {
+  --delta-x: 2px;
+  --delta-y: 2px;
+  --blur-radius: 5px;
+  --shadow-color: hsl(0 0 0 / 50%);
+
+  box-shadow: var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
+
+  /* filter is a different mathematical mechanism to box-shadow */
+  filter: drop-shadow(var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color));
+
+  text-shadow: var(--delta-x) var(--delta-y) var(--blur-radius) var(--shadow-color);
+}
