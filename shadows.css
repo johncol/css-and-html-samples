@@ -15,7 +15,10 @@
   /* Inset shadow */
   box-shadow: inset var(--delta-x) var(--delta-y) var(--blur-radius) var(--spread-radius) var(--shadow-color);
 
-  /* box-shadow can get more than one shadow value */
+  /*
+    box-shadow can get more than one shadow value
+    but it probably should not be animated because it'll have an impact on performance on lower-end devices 
+   */
   .layered.box {
     box-shadow:
       0 1px 1px hsl(0deg 0% 0% / 0.075),
