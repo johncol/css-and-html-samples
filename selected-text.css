@@ -1,0 +1,5 @@
+::selection {
+  /* change the back and font color of all the selected text in the page */
+  background-color: salmon;
+  color: hsl(0deg 0% 0% / 100%);
+}
