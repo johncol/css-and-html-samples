@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: grid;
+      place-content: center;
+      margin: 0;
+      padding: 0;
+      padding-top: 3rem;
+    }
+
+    label {
+      display: block;
+      margin: 1.5rem 0;
+
+      accent-color: hsl(180deg 100% 50% / 0.5);
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label><input type="radio" name="country" value="Canada">Canada</label>
+    <label><input type="radio" name="country" value="Colombia">Colombia</label>
+    <label><input type="radio" name="country" value="Japan">Japan</label>
+
+    <label><input type="checkbox" name="meals" value="Breakfast">Breakfast</label>
+    <label><input type="checkbox" name="meals" value="Lunch">Lunch</label>
+    <label><input type="checkbox" name="meals" value="Dinner">Dinner</label>
+
+    <label>Range: <input type="range" name="range" id="range"></label>
+
+    <label>Date: <input type="date" name="date" id="date"></label>
+    <label>Time: <input type="time" name="time" id="time"></label>
+    <label>Color: <input type="color" name="color" id="color"></label>
+
+    <label>File: <input type="file" name="file" id="file"></label>
+
+  </form>
+</body>
+</html>
