@@ -37,3 +37,14 @@
     lightgreen
   );
 }
+
+.sunset-gradient {
+  background-image: radial-gradient(
+    circle at 50% 100%,
+    white 0%,
+    yellow 10%,
+    gold 20%,
+    coral 30%,
+    skyblue
+  );
+}
