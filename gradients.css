@@ -12,3 +12,18 @@
     deeppink, salmon, gold, lightblue, lightgreen
   );
 }
+
+.sharp-lines-gradient {
+  background-image: linear-gradient(
+    deeppink 0%,
+    deeppink 20%,
+    salmon 20%,
+    salmon 40%,
+    gold 40%,
+    gold 60%,
+    lightblue 60%,
+    lightblue 80%,
+    lightgreen 80%,
+    lightgreen 100%
+  );
+}
