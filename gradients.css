@@ -27,3 +27,13 @@
     lightgreen 100%
   );
 }
+
+.using-hints {
+  /* the middle point between the two colors will be at 80% */
+  background-image: linear-gradient(
+    to top right,
+    deeppink,
+    80%,
+    lightgreen
+  );
+}
