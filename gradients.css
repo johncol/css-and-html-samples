@@ -1,0 +1,14 @@
+.element {
+  background-image: linear-gradient(
+    to top right,
+    deeppink, salmon, gold, lightblue, lightgreen
+  );
+  background-image: radial-gradient(
+    circle at left bottom,
+    deeppink, salmon, gold, lightblue, lightgreen
+  );
+  background-image: conic-gradient(
+    at center 75%,
+    deeppink, salmon, gold, lightblue, lightgreen
+  );
+}
