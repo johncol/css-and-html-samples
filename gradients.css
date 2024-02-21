@@ -8,7 +8,7 @@
     deeppink, salmon, gold, lightblue, lightgreen
   );
   background-image: conic-gradient(
-    at center 75%,
+    from 90deg at center 75%,
     deeppink, salmon, gold, lightblue, lightgreen, deeppink
   );
 }
