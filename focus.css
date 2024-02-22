@@ -1,0 +1,15 @@
+/* 
+  :focus-visible. This pseudo-class is very similar to :focus, but it only matches when the element is focused
+  and the user is using a non-pointer input device (eg. keyboard, paddles, sip-and-puff switch, …)
+ */
+button:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+/* 
+  :focus-within matches when one of its descendants is focused
+ */
+form:focus-within {
+  background-color: lightyellow;
+}
