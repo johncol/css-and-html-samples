@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 64px 0;
+      }
+    </style>
+
+    <style>
+      html {
+        --bg-color: white;
+        --dark-gold: hsl(34deg 90% 45%);
+        --gold: hsl(44deg 80% 70%);
+        --light-gold: hsl(44deg 100% 85%);
+        --percentage: 25%;
+      }
+
+      body {
+        background-color: var(--bg-color);
+      }
+
+      .wrapper {
+        position: relative;
+        height: 325px;
+        max-width: 550px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        border-radius: 9999px 9999px 1000px 1000px;
+        background-color: var(--gold);
+        
+        background-image: conic-gradient(
+          from 180deg at center bottom,
+          var(--dark-gold) 0%,
+          var(--dark-gold) var(--percentage),
+          var(--light-gold) 50%,
+          var(--dark-gold) calc(100% - var(--percentage)),
+          var(--dark-gold) 100%
+        );
+
+        transform: scale(0.65);
+      }
+
+      img {
+        transform-origin: center bottom;
+        transform: translateY(20px) scale(1.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img
+        class="trophy"
+        alt="gold trophy"
+        src="https://courses.joshwcomeau.com/cfj-mats/gold-trophy.png"
+      />
+    </div>
+  </body>
+</html>
