@@ -1,0 +1,18 @@
+img {
+  /* 
+    shape-outside lets us specify a shape that text should wrap around. circle is the most straightforward value
+   */
+  float: left;
+  border-radius: 50%;
+  shape-outside: circle();
+}
+
+img {
+  /* 
+    shape-margin, a special property that adds a gap between the opaque pixels in an image's shape and the surrounding content.
+   */
+  float: left;
+  shape-outside: url(./some-image-with-transparency.png);
+  shape-margin: 2rem;
+  margin-right: 2rem;
+}
