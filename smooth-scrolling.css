@@ -1,0 +1,9 @@
+/* 
+  Smooth scrolling is disabled by default. The default value for the scroll-behavior property is auto,
+  which jump-cuts the user to the new location.
+ */
+html {
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
