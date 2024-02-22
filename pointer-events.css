@@ -1,0 +1,19 @@
+.element {
+  /*
+    with this rule, .element is visible but cannot be clicked, and it behaves as it were not in the page
+    (although it's still focusable); given it behaves as it were not in the page, it doesn't block
+    pointer-events of elements behind it
+  */
+  pointer-events: none;
+}
+
+.parent {
+  pointer-events: auto;
+
+  /**
+    and we can disabled those events for a container but enable them again for its children
+  */
+  .child {
+    pointer-events: auto;
+  }
+}
