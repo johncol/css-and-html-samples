@@ -5,4 +5,16 @@
 
   /* scrollbar-width: auto | thin | none; */
   scrollbar-width: thin;
+
+  /*
+    to maximize support given how recently the prop has been supported by major browsers
+    we can rely on the prefixed pseudo-elements -webkit-scrollbar and -webkit-scrollbar-thumb
+  */
+  ::-webkit-scrollbar-thumb {
+    background-color: salmon;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: var(--color-track);
+  }
 }
