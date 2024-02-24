@@ -28,10 +28,25 @@
         
         clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
       }
+
+      /* clip-path can be animated, but the amount of edges need to be the same in the transition/animation */
+      .arrow {
+        width: 200px;
+        height: 90px;
+        background-color: lightgreen;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); /* 8 points, 8 edges */
+        transition: clip-path 0.4s ease-in-out;
+        will-change: clip-path;
+
+        &:hover {
+          clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); /* 8 points, 8 edges */
+        }
+      }
     </style>
   </head>
   <body>
     <div class="triangle"></div>
     <img class="octagon" src="https://images.unsplash.com/photo-1708436137487-b858e5c0ea28?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <div class="arrow"></div>
   </body>
 </html>
