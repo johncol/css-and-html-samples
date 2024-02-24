@@ -1,0 +1,14 @@
+.element {
+  /*
+    this property will create some margin at the specified side (top in this case)
+    when .element is scrolled into view, e.g. imagine a table of contents
+    where the headings are links to the corresponding sections
+  */
+  scroll-margin-top: 3rem;
+
+  /* 
+    scrollbar-gutter allows us to always make space for the scrollbar, 
+    as a wy to prevent layout shift when the page loads with more data and the scrollbar appears
+   */
+  scrollbar-gutter: stable;
+}
