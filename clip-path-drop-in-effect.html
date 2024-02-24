@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        display: grid;
+        place-content: center;
+      }
+
+      @keyframes drop-in {
+        0% {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+        100% {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      .highlighted {
+        background: hsl(50deg 100% 70%);
+        padding: 1em 2em;
+        font-size: 4rem;
+        font-weight: bold;
+        width: -moz-fit-content;
+        width: fit-content;
+        border-radius: 4px;
+
+        will-change: clip-path;
+        animation: drop-in 1s ease-in-out both;
+        animation-delay: 500ms;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="highlighted">The World's Best Keyboard</p>
+  </body>
+</html>
