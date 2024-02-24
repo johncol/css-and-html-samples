@@ -7,9 +7,12 @@
     <style>
 
       body {
-        & > * {
-          margin: 1rem;
-        }
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
       }
 
       /* use clip path to trim a dom element into a specific share */
@@ -42,11 +45,34 @@
           clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); /* 8 points, 8 edges */
         }
       }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        clip-path: circle(50% at 50% 50%);
+      }
+
+      .ellipse {
+        width: 200px;
+        height: 100px;
+        background-color: lightcoral;
+        clip-path: ellipse(50% 50% at 50% 50%);
+      }
+
+      .shadow-wrapper {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      }
     </style>
   </head>
   <body>
     <div class="triangle"></div>
     <img class="octagon" src="https://images.unsplash.com/photo-1708436137487-b858e5c0ea28?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
     <div class="arrow"></div>
+    <div class="circle"></div>
+    <div class="ellipse"></div>
+    <div class="shadow-wrapper">
+      <img class="octagon" src="https://images.unsplash.com/photo-1708436137487-b858e5c0ea28?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </div>
   </body>
 </html>
