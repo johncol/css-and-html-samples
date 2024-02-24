@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      body {
+        & > * {
+          margin: 1rem;
+        }
+      }
+
+      /* use clip path to trim a dom element into a specific share */
+      .triangle {
+        width: 100px;
+        height: 80px;
+        background-color: hotpink;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+
+      .octagon {
+        display: block;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="triangle"></div>
+    <img class="octagon" src="https://images.unsplash.com/photo-1708436137487-b858e5c0ea28?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+  </body>
+</html>
