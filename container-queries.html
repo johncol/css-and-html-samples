@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container Queries</title>
+    <style>
+      * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 100;
+      }
+
+      section {
+        container-type: inline-size;
+
+        p {
+          color: darkslateblue;
+          font-size: 30px;
+
+          @container (min-width: 600px) {
+            color: tomato;
+            font-size: 40px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <div>
+          <p>
+            Container Queries, it does not depend on the size of the immediate
+            parent, but on the size of the container, which is whatever element
+            has the container-type property set.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
