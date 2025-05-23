@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* https://developer.chrome.com/docs/css-ui/css-nth-child-of-s */
+
+      html {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .item:not([hidden]) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item {
+        width: 50px;
+        height: 50px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+      }
+
+      .item:nth-child(2) {
+        /* only second item */
+      }
+
+      .item:nth-child(2n) {
+        /* even items */
+      }
+
+      .item:nth-child(even) {
+        /* even items */
+      }
+
+      .item:nth-child(2n + 1) {
+        /* odd items */
+      }
+
+      .item:nth-child(odd) {
+        /* odd items */
+      }
+
+      .item:nth-child(3n + 1) {
+        /* every 3rd item */
+      }
+
+      .item:nth-child(n + 4) {
+        /* all items from the 4th one */
+      }
+
+      .item:nth-child(-n + 4) {
+        /* all items until the 4th one */
+      }
+
+      .item:nth-child(n + 4):nth-child(-n + 6) {
+        /* all items from the 4th to the 6th one */
+      }
+
+      .item:nth-last-child(n + 4):nth-last-child(-n + 6) {
+        /* all items from the 4th to the 6th one, from the end */
+      }
+
+      .item.favorite:nth-child(2) {
+        /* nothing will match */
+      }
+
+      .item:nth-child(2 of .favorite) {
+        /* it will match the second item that has the class favorite */
+      }
+
+      .item:nth-child(2 of .favorite, .first) {
+        /* it will match the second item that has the class favorite or first */
+      }
+
+      .item:nth-child(even of :not([hidden])) {
+        /* it will match the even items that are not hidden */
+        background-color: blanchedalmond;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item first">1</div>
+      <div class="item">2</div>
+      <div class="item favorite">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item favorite">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item favorite">9</div>
+      <div class="item">10</div>
+      <div class="item" hidden>11</div>
+      <div class="item" hidden>12</div>
+    </div>
+  </body>
+</html>
