@@ -3,29 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive Accordion</title>
+    <title>Marathon Training Terms</title>
     <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+      }
+      .container {
+        max-width: 600px;
+        width: 100%;
+      }
       details {
         border: 1px solid #000;
         border-radius: 4px;
         padding: 1em;
+        margin-bottom: 1em;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <details open name="accordion" id="main-info">
-      <summary>Main Info</summary>
-      <p>
-        Main Info lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quisquam, quos.
-      </p>
-    </details>
-    <details open name="accordion" id="another-info">
-      <summary>Another Info</summary>
-      <p>
-        Another Info lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quisquam, quos.
-      </p>
-    </details>
+    <div class="container">
+      <details open name="accordion" id="taper">
+        <summary>Taper</summary>
+        <p>
+          The gradual reduction in training volume and intensity in the weeks leading up to a marathon. 
+          This allows the body to recover and store energy for race day.
+        </p>
+      </details>
+
+      <details open name="accordion" id="carb-loading">
+        <summary>Carb Loading</summary>
+        <p>
+          The practice of increasing carbohydrate intake in the days before a marathon to maximize glycogen stores in the muscles and liver.
+        </p>
+      </details>
+
+      <details open name="accordion" id="wall">
+        <summary>The Wall</summary>
+        <p>
+          A point during the marathon (usually around mile 20) where glycogen stores are depleted, causing extreme fatigue and difficulty maintaining pace.
+        </p>
+      </details>
+
+      <details open name="accordion" id="tempo-run">
+        <summary>Tempo Run</summary>
+        <p>
+          A sustained effort run at a "comfortably hard" pace, typically lasting 20-40 minutes. 
+          Helps improve lactate threshold and race pace endurance.
+        </p>
+      </details>
+
+      <details open name="accordion" id="interval-training">
+        <summary>Interval Training</summary>
+        <p>
+          Alternating between high-intensity running and recovery periods. 
+          Improves speed, cardiovascular fitness, and running economy.
+        </p>
+      </details>
+
+      <details open name="accordion" id="long-run">
+        <summary>Long Run</summary>
+        <p>
+          The longest run of the week, gradually increasing in distance during training. 
+          Builds endurance and prepares the body for the marathon distance.
+        </p>
+      </details>
+
+      <details open name="accordion" id="recovery-run">
+        <summary>Recovery Run</summary>
+        <p>
+          A slow, easy-paced run that helps the body recover from harder workouts while maintaining aerobic fitness.
+        </p>
+      </details>
+
+      <details open name="accordion" id="negative-split">
+        <summary>Negative Split</summary>
+        <p>
+          Running the second half of the marathon faster than the first half. 
+          A strategic approach that helps conserve energy and finish strong.
+        </p>
+      </details>
+
+      <details open name="accordion" id="cross-training">
+        <summary>Cross Training</summary>
+        <p>
+          Alternative forms of exercise (swimming, cycling, strength training) that complement running and help prevent injury.
+        </p>
+      </details>
+
+      <details open name="accordion" id="foam-rolling">
+        <summary>Foam Rolling</summary>
+        <p>
+          Self-myofascial release technique using a foam roller to massage muscles and connective tissue, 
+          helping with recovery and injury prevention.
+        </p>
+      </details>
+    </div>
   </body>
 </html>
