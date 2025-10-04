@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Path</title>
+
+    <style>
+      :root {
+        --animation-duration: 30s;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+      }
+
+      .motion-path-container {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 1440px;
+        height: 320px;
+
+        svg {
+          fill: none;
+          stroke-dasharray: 1ch;
+          stroke-width: 2px;
+          stroke: rgb(230, 230, 230);
+          display: none; /* Hide the path */
+        }
+      }
+
+      @keyframes motion {
+        from {
+          offset-distance: 0%;
+        }
+        to {
+          offset-distance: 100%;
+        }
+      }
+
+      .animated-element {
+        --size: 64px;
+        &, img {
+          width: var(--size);
+          height: var(--size);
+        }
+
+        position: absolute;
+        top: 0;
+
+        offset-path: path(
+          "M0,32L24,26.7C48,21,96,11,144,21.3C192,32,240,64,288,80C336,96,384,96,432,80C480,64,528,32,576,69.3C624,107,672,213,720,240C768,267,816,213,864,181.3C912,149,960,139,1008,154.7C1056,171,1104,213,1152,218.7C1200,224,1248,192,1296,202.7C1344,213,1392,267,1416,293.3L1440,320L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
+        );
+        offset-distance: 0%;
+        offset-rotate: 0deg;
+
+        animation-delay: 1s;
+        animation-timing-function: ease-in-out;
+        animation-name: motion;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+
+        animation-duration: var(--animation-duration);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="motion-path-container">
+      <svg viewBox="0 0 1440 320" aria-hidden="true">
+        <path
+          d="M0,32L24,26.7C48,21,96,11,144,21.3C192,32,240,64,288,80C336,96,384,96,432,80C480,64,528,32,576,69.3C624,107,672,213,720,240C768,267,816,213,864,181.3C912,149,960,139,1008,154.7C1056,171,1104,213,1152,218.7C1200,224,1248,192,1296,202.7C1344,213,1392,267,1416,293.3L1440,320L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
+        />
+      </svg>
+      <div class="animated-element">
+        <img src="./assets/ghost.png" alt="Ghost" />
+      </div>
+    </div>
+  </body>
+</html>
