@@ -8,7 +8,7 @@
 
   /* 
     scrollbar-gutter allows us to always make space for the scrollbar, 
-    as a wy to prevent layout shift when the page loads with more data and the scrollbar appears
+    as a way to prevent layout shift when the page loads with more data and the scrollbar appears
    */
   scrollbar-gutter: stable;
 }

@@ -8,10 +8,10 @@
 }
 
 .parent {
-  pointer-events: auto;
+  pointer-events: none;
 
   /**
-    and we can disabled those events for a container but enable them again for its children
+    and we can disable those events for a container but enable them again for its children
   */
   .child {
     pointer-events: auto;

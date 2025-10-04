@@ -1,6 +1,6 @@
 /* https://caniuse.com/viewport-unit-variants */
 .element {
-  /* 100% of viewport height with the downside of mobile devices taking into account the space that is actually sued by the toolbar */
+  /* 100% of viewport height with the downside of mobile devices taking into account the space that is actually ysed by the toolbar */
   height: 100vh; 
 
   /* large viewport height, basically the same as vh */
